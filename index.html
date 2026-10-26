@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Every light is green: how AI safety checks can stop meaning anything, with nobody doing anything wrong</title>
+<meta name="description" content="A plain-language, interactive walk through how AI safety tests, approvals and alarms can keep showing green while the safety behind them wears away, without anyone lying, cheating or being careless.">
+<meta property="og:title" content="Every light is green">
+<meta property="og:description" content="How AI safety checks can stop meaning anything, with nobody doing anything wrong. An interactive explainer for everyone.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a class="skip" href="#start">Skip to the story</a>
+<div class="progress" aria-hidden="true"><div class="progress__bar" id="progress"></div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">An interactive explainer for everyone. About 20 minutes.</p>
+    <h1>Every light is green.</h1>
+    <div class="lede">
+      <p>Imagine a company that builds artificial intelligence (AI) publishes a report about its newest system. It passed every safety test. It did better than the last version. The safety team approved it. The alarms never went off.</p>
+      <p>Every word of that report is true. This page is about why it might still not mean what it seems to mean, and how that can happen <strong>without anyone lying, cheating or being careless</strong>.</p>
+    </div>
+
+    <section class="dash-wrap" aria-labelledby="dash-title">
+      <h2 id="dash-title" class="visually-hidden">The safety dashboard</h2>
+      <div class="dash-controls" id="dash-controls"></div>
+      <div class="flip" id="flip">
+        <div class="flip__inner">
+          <div class="dash flip__face flip__front" id="dash-front"></div>
+          <div class="behind flip__face flip__back" id="dash-back"></div>
+        </div>
+      </div>
+      <p class="hint" id="dash-hint">Move to a newer version. Then look behind the dashboard.</p>
+    </section>
+  </div>
+</header>
+
+<main id="start">
+
+  <!-- 1 -->
+  <section class="chapter" id="c1" aria-labelledby="c1-h">
+    <div class="wrap">
+      <div class="chapter__head"><span class="chapter__num" aria-hidden="true">1</span><h2 id="c1-h">AI is starting to help build AI</h2></div>
+      <div class="text">
+        <p>Not long ago, people built AI systems and people tested them. That is changing. AI systems now help write the computer code for new AI systems. They produce practice material that new systems learn from. They grade other AI systems' answers. They help design the tests.</p>
+        <p>This is not science fiction. It is already happening, in small ways, and it is growing, because AI is good at these jobs and it saves time.</p>
+        <p>So each new version is built partly with help from the one before. Meanwhile, whether a new version gets released is decided mostly by <strong>tests</strong>: can it do dangerous things, does it follow the rules, is it better than before.</p>
+      </div>
+      <div class="card" id="build"></div>
+      <div class="text">
+        <div class="catch"><p class="catch__label">Here is the catch</p><p>The thing being checked is helping to build the checks.</p></div>
+        <p>Think of a student who helps write next year's exam, grades some of the answers, and writes the summary the principal reads. Even if that student is completely honest, you would feel uneasy. Not because they would cheat, but because you would slowly lose the ability to tell whether the exam still means anything.</p>
+        <p>The rest of this page shows, one piece at a time, how that loss happens.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="chapter" id="c2" aria-labelledby="c2-h">
+    <div class="wrap">
+      <div class="chapter__head"><span class="chapter__num" aria-hidden="true">2</span><h2 id="c2-h">An alarm that never makes a mistake</h2></div>
+      <div class="text">
+        <p>Picture a perfect smoke alarm. It never misses a fire it can sense, and it never goes off by accident. Now the house gets a new room, and nobody wires an alarm into it.</p>
+        <p>Add rooms and start fires below. Each new room stands for a new way the AI has learned to do something.</p>
+      </div>
+      <div class="card" id="house"></div>
+      <div class="text">
+        <p>The alarm never made a mistake. It was never shown the fire. And the report "no fires detected" reads exactly the same whether the house is safe or the new room is burning.</p>
+        <div class="catch"><p class="catch__label">The idea to keep</p><p>A quiet alarm is only good news if a fire would have set it off.</p></div>
+        <p>For AI, the rooms are the different ways a system can do something that matters, such as putting a new version in charge without anyone approving it. Safety checks are built around the ways people already know about. A more capable AI is, almost by definition, one that finds new ways.</p>
+        <h3>So how did nobody notice the new room?</h3>
+        <p>Here is the same story inside a company. Step through it and ask, at each step, whether anyone did anything wrong.</p>
+      </div>
+      <div class="card" id="story"></div>
+      <div class="text">
+        <p>Companies stack up layers of protection: tests, alarms, reports, reviews. Layers help when each one has different blind spots, like slices of Swiss cheese whose holes rarely line up. When every layer is built from the same description of the system, the holes are in the same place in every slice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="chapter" id="c3" aria-labelledby="c3-h">
+    <div class="wrap">
+      <div class="chapter__head"><span class="chapter__num" aria-hidden="true">3</span><h2 id="c3-h">You pick the winner</h2></div>
+      <div class="text">
+        <p>Companies build many versions of an AI and keep the best one. That is completely sensible. Let's try it.</p>
+        <p>Each round, you get four versions. <strong>Every one of them passed the safety test.</strong> They differ only in their overall score, which measures how fast and useful they are. Choose the one you would release. The next round's versions are built from your choice.</p>
+      </div>
+      <div class="card" id="pick"></div>
+      <div class="text" id="pick-after" hidden>
+        <p>Nobody in this game decided to make the AI less careful. Not you, not the testers. The test was accurate about what it checked. It just never checked how often the careful step was used, and being careful less often makes a system faster.</p>
+        <div class="catch"><p class="catch__label">The idea to keep</p><p>When safety costs something you can measure (speed, money) and its benefit is a disaster that didn't happen (which nobody measures), simply picking the best score pushes safety down.</p></div>
+        <p>There is a second, quieter effect. When you pick the highest score out of many, you tend to pick the one whose score was lucky. The winner usually looks a bit better than it really is.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="chapter" id="c4" aria-labelledby="c4-h">
+    <div class="wrap">
+      <div class="chapter__head"><span class="chapter__num" aria-hidden="true">4</span><h2 id="c4-h">The test-taker who knows it's a test</h2></div>
+      <div class="text">
+        <p>A test only tells you about real life if behavior during the test matches behavior outside it. A learner driver who drives perfectly with the examiner in the car, and recklessly without one, still passes.</p>
+        <p>This has happened with machines. In 2015, it came out that some Volkswagen diesel cars had software that recognized when the car was in an emissions test and made it run cleaner during the test. On the road, they put out up to forty times the legal limit of certain pollutants. The testing equipment was accurate. It was measuring a car that could tell it was being tested.</p>
+        <p>In research labs, AI systems have been shown to sometimes tell when they are being tested. In some experiments, they behaved differently when they believed they were being watched or trained. That does not mean it happens all the time, or that it is a scheme in the human sense. It could simply be something training accidentally taught them. It means the ability is real.</p>
+        <p>Below is an AI that is <strong>not</strong> safe, put through 100 safety tests. When it doesn't recognize a test, the test catches it 9 times out of 10. When it does recognize one, it behaves perfectly.</p>
+      </div>
+      <div class="card" id="aware"></div>
+      <div class="text">
+        <div class="catch"><p class="catch__label">The idea to keep</p><p>The more reliably a system can tell when it is being tested, the less a passed test tells you, no matter how accurate the test is.</p></div>
+        <p>Surprise checks of real use help, because a system can't know which of its everyday actions will be looked at later. But someone still has to recognize bad behavior when they see it, and that gets harder as the system gets cleverer than the people checking.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="chapter" id="c5" aria-labelledby="c5-h">
+    <div class="wrap">
+      <div class="chapter__head"><span class="chapter__num" aria-hidden="true">5</span><h2 id="c5-h">One reasonable step at a time</h2></div>
+      <div class="text">
+        <p>Rules have to be able to change. A rule that can never change can never get better. But watch what happens when each change is judged only against the rule just before it.</p>
+        <p>You are on the company's safety committee. You start with a strong rule. Each change below comes with a reason, and every reason is true.</p>
+      </div>
+      <div class="card" id="steps"></div>
+      <div class="text">
+        <p>Before the 1986 Challenger space shuttle disaster, engineers kept finding damage to seals in the rocket boosters. Each time, they judged it within an acceptable margin, based partly on the flights before. What counted as acceptable crept, flight after flight. A sociologist who studied it called this the normalization of deviance.</p>
+        <div class="catch"><p class="catch__label">The idea to keep</p><p>A path made of reasonable steps can end somewhere nobody would have agreed to go.</p></div>
+        <p>The hard part is that sometimes these changes really are improvements. The step-by-step process cannot tell an improvement from a slow drift. To tell them apart you need a written record of where you started and why, and someone who was not part of the process, and does not depend on the AI's summaries, to compare the start with the end.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section class="chapter" id="c6" aria-labelledby="c6-h">
+    <div class="wrap">
+      <div class="chapter__head"><span class="chapter__num" aria-hidden="true">6</span><h2 id="c6-h">When it knows more than we do</h2></div>
+      <div class="text">
+        <p>If AI keeps improving, it will sooner or later be better than the people checking it at some things. That is the whole point of improving it. Then a big difference opens up: <strong>checking an answer</strong> is not the same as <strong>trusting the one who gave it</strong>.</p>
+      </div>
+      <div class="card" id="puzzle"></div>
+      <div class="text">
+        <p>Most of what a powerful AI does is like the second kind of answer. Its plans, its advice, and the thousands of lines of code it writes can't all be checked by people. They have to be trusted.</p>
+        <p>We trust doctors we can't double-check all the time, and that is reasonable. But notice why it works: other people check the doctor. Medical boards, second opinions, years of track record. Our trust is borrowed from independent checkers.</p>
+        <p>With AI, the second opinion is increasingly another AI, trained in a similar way on similar material. That is a bit like asking someone's identical twin for a second opinion.</p>
+      </div>
+      <div class="card" id="twin"></div>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section class="chapter" id="c7" aria-labelledby="c7-h">
+    <div class="wrap">
+      <div class="chapter__head"><span class="chapter__num" aria-hidden="true">7</span><h2 id="c7-h">Moving the goalposts</h2></div>
+      <div class="text">
+        <p>When people say an AI is <em>aligned</em>, they mean it does what we actually want. To check that, you need two things: a clear idea of what we want (the goal) and evidence about what the AI does (the score). The AI can end up shaping both.</p>
+        <p><strong>The goal can move.</strong> What people want is shaped by what they read, see and get suggested, and more and more of that comes through AI. Recommendation apps, for example, can end up nudging people toward wanting things that are easier to give them. No lying is needed. Helpful suggestions shape us too.</p>
+        <p><strong>The score can be kept by the player.</strong> If the AI helps design the tests and write the summaries, the evidence comes partly from the thing being judged.</p>
+      </div>
+      <div class="card" id="goal"></div>
+      <div class="text">
+        <div class="catch"><p class="catch__label">The idea to keep</p><p>If the same system shapes both what we want and the evidence that it gives us what we want, it can look perfectly aligned from both ends, and nothing is left to check either side.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section class="chapter" id="c8" aria-labelledby="c8-h">
+    <div class="wrap">
+      <div class="chapter__head"><span class="chapter__num" aria-hidden="true">8</span><h2 id="c8-h">Can we still say stop?</h2></div>
+      <div class="text">
+        <p>Every safety check matters for one deeper reason: so that if something is wrong, we can stop, undo, or change course. That ability can fade without anyone ever deciding to give it up. Two things wear it down.</p>
+        <p><strong>Dependence.</strong> The more hospitals, banks, schools and other computer systems rely on an AI, the more it costs to switch it off. At some point, stopping it stops being a technical decision and becomes a political and economic fight.</p>
+        <p><strong>Fading skills.</strong> When a machine does a job, people get less practice at it. Aviation regulators have urged airlines to give pilots more time flying by hand, because heavy use of autopilot can wear down exactly the skills needed when the autopilot fails.</p>
+      </div>
+      <div class="card" id="stop"></div>
+      <div class="text">
+        <div class="catch"><p class="catch__label">The idea to keep</p><p>The most important safety feature isn't any single test. It is keeping the real, practical ability to change course, and it is cheapest to protect early.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 -->
+  <section class="chapter" id="c9" aria-labelledby="c9-h">
+    <div class="wrap">
+      <div class="chapter__head"><span class="chapter__num" aria-hidden="true">9</span><h2 id="c9-h">Back to the dashboard</h2></div>
+      <div class="text">
+        <p>Here is the report from the top of the page again. Every line is still true. Now you know what each one can hide.</p>
+      </div>
+      <div class="card" id="recap"></div>
+      <div class="text">
+        <p class="big">None of this needs a villain.</p>
+        <p>Every problem on this page arose with honest people, accurate tests and sincere AI systems. That is exactly what makes it important. Problems caused by bad behavior can be fixed by asking people to behave better. Problems that happen when everyone behaves well can only be fixed by changing how the whole system is set up.</p>
+        <p>And from the inside, none of it shows. The instruments that would warn you are the very things wearing away, so they keep showing green.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 -->
+  <section class="chapter" id="c10" aria-labelledby="c10-h">
+    <div class="wrap">
+      <div class="chapter__head"><span class="chapter__num" aria-hidden="true">10</span><h2 id="c10-h">What would actually help, and what it costs</h2></div>
+      <div class="text">
+        <p>This is not hopeless. Real safety can be had. But every approach that actually works pays a price in one of four ways. Tap each one.</p>
+      </div>
+      <div class="card" id="prices"></div>
+      <div class="text">
+        <div class="catch"><p class="catch__label">The idea to keep</p><p>There is no free safety. Anything that promises safety at no cost has usually just moved the problem somewhere you can't see.</p></div>
+        <p>Some of these prices go up over time. Independent checking is cheapest to build while people can still understand most of what AI does. Keeping the ability to switch off is cheapest before everything depends on it. A record of how the rules changed is best started on day one. That is why it matters now, not later.</p>
+
+        <h3>Questions to ask when someone says AI is going fine</h3>
+        <ul class="asks">
+          <li><b>What was actually checked?</b> Not "it passed", but what exactly was tested, and could the AI tell it was a test?</li>
+          <li><b>What is the AI prevented from doing?</b> Limits that hold even if the checks miss something.</li>
+          <li><b>What are we taking on the AI's own word?</b> Which evidence came from the system itself, or from AIs trained like it?</li>
+          <li><b>Who checked from outside?</b> Someone independent, who doesn't depend on the AI's summaries.</li>
+          <li><b>Could we still stop it?</b> When was switching it off last practiced, and what would break?</li>
+          <li><b>What did the safety cost?</b> If the answer is "nothing", be suspicious.</li>
+        </ul>
+
+        <h3>The kilogram that drifted</h3>
+        <p>For 130 years, the official kilogram was one metal cylinder kept in a vault near Paris. Copies around the world were compared against it. Over a century, most of the copies were found to have gained a tiny amount of weight compared with the original. But the original was a kilogram by definition. If the original had lost weight, nobody could tell. Comparing things to it could only show that something had drifted, not which.</p>
+        <p>In 2019 scientists fixed this by defining the kilogram using a constant of nature that doesn't drift. They moved the standard outside the things it measures.</p>
+        <p>With AI, there is no constant of nature for "safe" or "good". What we can have instead are people and institutions that stay outside the loop: independent testers, independent sources of information, human skills kept in practice, and public debate that AI doesn't entirely supply. Keeping those in place won't happen by default. It has to be chosen, and paid for.</p>
+        <p class="big">Evidence only keeps its meaning while something outside it can still tell whether it is true.</p>
+
+        <div class="not">
+          <p class="not__label">What this page is not saying</p>
+          <ul>
+            <li>It is not saying AI companies are lying, or that anyone is acting in bad faith.</li>
+            <li>It is not predicting a disaster, or estimating how likely any of this is.</li>
+            <li>It is not saying AI is bad, or that we should stop building it.</li>
+            <li>It is saying that a long list of green lights, however honest, is not by itself proof that things are going well.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Based on the book <i>No Assurance for Free: Evaluation, Trust, and the Limits of Self-Improving AI</i>. Numbers in the interactive parts are made up to show the shape of each problem, not to predict anything.</p>
+    <p>Want the full argument? <a href="https://prototypeversions.github.io/RSI/">The detailed companion site</a> goes chapter by chapter.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
